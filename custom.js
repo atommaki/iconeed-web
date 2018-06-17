@@ -1,5 +1,5 @@
 $(window).on('load', function() {
-    
+
     var contractAddress = "0x567b63c101ad7a8350bec41b4b953a9cd5f46642"; // on Ropsten testnet!
     var contractAbi = [
     {
@@ -19,7 +19,7 @@ $(window).on('load', function() {
     {
         "constant": true,
         "inputs": [],
-        "name": "greeting",
+        "name": "amount",
         "outputs": [
             {
                 "name": "",
@@ -69,10 +69,10 @@ $(window).on('load', function() {
         console.log(errorMsg);
         return;
     }
-    
+
     // create instance of contract object that we use to interface the smart contract
     var contractInstance = web3.eth.contract(contractAbi).at(contractAddress);
-    
+
     // get last greeting on page load by calling the `view` function `getEverything`
     contractInstance.getEverything(function(error, greeting) {
         if (error) {
@@ -83,7 +83,7 @@ $(window).on('load', function() {
         }
         $('#content').text('greeting from contract: ' + greeting);
     });
-    
+
     // use HTML form with submit button to write data into the blockchain
     $('#my-form').on('submit', function(e) {
         e.preventDefault(); // cancel the actual submit
@@ -108,7 +108,7 @@ $(window).on('load', function() {
         console.log('Error in event handler: ' + error);
     else {
         console.log('got event data: ' + data);
-        $('#pastGreetings').append(JSON.stringify(data));
+        $('#pastDonations').append(JSON.stringify(data));
     }
     });
 
@@ -118,3 +118,4 @@ function cb(error, response) {
     // callback as helper function for debugging purposes
     console.log('error: ' + error + ', response: ' + response);
 }
+
