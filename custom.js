@@ -81,7 +81,7 @@ $(window).on('load', function() {
             console.log(errorMsg);
             return;
         }
-        $('#content').text('donation: ' + Everything);
+        // $('#content').text('donation: ' + Everything);
     });
 
     // use HTML form with submit button to write data into the blockchain
