@@ -7,13 +7,44 @@
         <h1>Send your donation here!</h1>
         <div id="content">Can I has web3?!</div>
         <form id="my-form">
-            <input type="text" name="receiverID"    id="receiverID"     value="1234567" />
-            <input type="text" name="amount"        id="amount"         value="1" />
-            <input type="text" name="currency"      id="currency"       value="CHF" />
-            <input type="text" name="percent2org"   id="percent2org"    value="1%" />
-            <input type="text" name="percent2plat"  id="percent2plat"   value="0.1%" />
-            <input type="text" name="note"          id="note"           value="Good luck!" />
-            <button type="submit">Send now!</button>
+            <table>
+
+            <tr>
+            <th>receiverID:</th>
+            <th><input type="text" name="receiverID"    id="receiverID"     value="1234567" /></th>
+            </tr>
+
+            <tr>
+            <th>amount:</th>
+            <th><input type="text" name="amount"        id="amount"         value="1" /></th>
+            </tr>
+
+            <tr>
+            <th>currency:</th>
+            <th><input type="text" name="currency"      id="currency"       value="CHF" /></th>
+            </tr>
+
+            <tr>
+            <th>Percentage goes to the organization:</th>
+            <th><input type="text" name="percent2org"   id="percent2org"    value="1%" /></th>
+            </tr>
+
+            <tr>
+            <th>Percentage goes to the platform:</th>
+            <th><input type="text" name="percent2plat"  id="percent2plat"   value="0.1%" /></th>
+            </tr>
+
+            <tr>
+            <th>Note (optional):</th>
+            <th><input type="text" name="note"          id="note"           value="Good luck!" /></th>
+            </tr>
+
+            <tr>
+            <th></th>
+            <th><button type="submit">Send now!</button></th>
+            </tr>
+
+            </table>
         </form>
         <script src="custom.js"></script>
         <div id="pastDonations"><h2>Past Donations:</h2><br /></div>
