@@ -74,14 +74,14 @@ $(window).on('load', function() {
     var contractInstance = web3.eth.contract(contractAbi).at(contractAddress);
 
     // get last greeting on page load by calling the `view` function `getEverything`
-    contractInstance.getEverything(function(error, greeting) {
+    contractInstance.getEverything(function(error, Everything) {
         if (error) {
-            var errorMsg = 'error reading greeting from smart contract: ' + error;
+            var errorMsg = 'error reading from smart contract: ' + error;
             $('#content').text(errorMsg);
             console.log(errorMsg);
             return;
         }
-        $('#content').text('greeting from contract: ' + greeting);
+        $('#content').text('donation: ' + Everything);
     });
 
     // use HTML form with submit button to write data into the blockchain
