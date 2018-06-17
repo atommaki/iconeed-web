@@ -87,7 +87,13 @@ $(window).on('load', function() {
     // use HTML form with submit button to write data into the blockchain
     $('#my-form').on('submit', function(e) {
         e.preventDefault(); // cancel the actual submit
-        var newEverything = $('#receiverID').val() + ',' + $('#amount').val();
+        var newEverything = $('#receiverID').val() + ',' +
+                            $('#amount').val() + ',' +
+                            $('#currency').val() + ',' +
+                            $('#percent2org').val() + ',' +
+                            $('#percent2plat').val() + ',' +
+                            $('#note').val();
+
 
     // here we write into the blockchain
         contractInstance.setEverything(newEverything, function(error, txHash) {
