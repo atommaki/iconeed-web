@@ -19,7 +19,7 @@ $(window).on('load', function() {
     {
         "constant": true,
         "inputs": [],
-        "name": "amount",
+        "name": "Everything",
         "outputs": [
             {
                 "name": "",
@@ -87,7 +87,7 @@ $(window).on('load', function() {
     // use HTML form with submit button to write data into the blockchain
     $('#my-form').on('submit', function(e) {
         e.preventDefault(); // cancel the actual submit
-        var newEverything = $('#amount').val(); // read data that we want to write into the blockchain
+        var newEverything = $('#receiverID').val() + $('#amount').val();
 
     // here we write into the blockchain
         contractInstance.setEverything(newEverything, function(error, txHash) {
