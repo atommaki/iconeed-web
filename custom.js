@@ -62,6 +62,7 @@ $(window).on('load', function() {
     if (typeof web3 !== 'undefined') {
         // Use Mist/MetaMask's provider
         //$('#content').text('I has web3!!!');
+        $('#content').text('');
         window.web3 = new Web3(web3.currentProvider);
     } else {
         var errorMsg = 'I doesn\'t has web3 :( Please open in Google Chrome Browser and install the Metamask extension.';
